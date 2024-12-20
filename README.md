@@ -50,6 +50,18 @@ Switches the audio output (sink) of the active window's audio stream. This scrip
 
 ---
 
+## StreamDeck Integration
+
+These scripts can be easily integrated with an Elgato Stream Deck using the "System: Open" action. To set this up:
+
+1. In the Stream Deck software, drag a "System: Open" action to your desired button
+2. Set the action to point to the script's full path (e.g., `/home/user/audio-stream-control/lower_volume_active_window.sh`)
+3. Optionally, customize the button's icon and title
+
+This allows you to control your active window's audio with a single button press on your Stream Deck.
+
+---
+
 ## Requirements
 
 These scripts require the following tools to be installed:
