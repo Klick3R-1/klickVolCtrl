@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define log file
-LOG_FILE="$HOME/raise_volume_active_window_limited.log"
+LOG_FILE="$HOME/raise_volume_active_window.log"
 
 # Log function
 log() {
