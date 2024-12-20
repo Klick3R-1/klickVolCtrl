@@ -100,12 +100,21 @@ sudo pacman -S xdotool xorg-xprop pulseaudio-ctl
 
 ## Logs
 
-Each script logs its operations to a separate log file in the home directory:
+Each script has built-in logging functionality that is commented out by default. To enable logging:
+
+1. Uncomment the `LOG_FILE` definition near the top of each script
+2. Uncomment the `log()` function definition
+3. Uncomment all `log` calls throughout the script
+4. Restore the `tee` commands and log file redirections
+5. Change error redirections from `/dev/null` back to `$LOG_FILE`
+6. Uncomment debugging output sections
+
+When enabled, each script will log to a separate file in the home directory:
 - `lower_volume_active_window.log`
 - `raise_volume_active_window.log`
 - `toggle_sink.log`
 
-These logs help debug issues or understand what the script is doing.
+These logs can help debug issues or understand the script's operation. By default, all logging, error output, and debugging sections are disabled to minimize disk writes and improve performance.
 
 ---
 
